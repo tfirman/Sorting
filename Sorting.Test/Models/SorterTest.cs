@@ -48,8 +48,15 @@ namespace Sorter.Tests
     public void MergeResult_52981736_12356789()
     {
       SortStuff testSortStuff = new SortStuff();
-      List<int> inputList = new List<int> {5,2,9,8,1,7,3,6};
-      CollectionAssert.AreEqual(new List<int> {1,2,3,5,6,7,8,9}, testSortStuff.MergeSort(inputList));
+      List<int> inputList = new List<int> {78,2,9,8,1,7,3,6};
+      CollectionAssert.AreEqual(new List<int> {1,2,3,6,7,8,9,78}, testSortStuff.MergeSort(inputList));
+    }
+    [TestMethod]
+    public void MergeResult_529817364_123456789()
+    {
+      SortStuff testSortStuff = new SortStuff();
+      List<int> inputList = new List<int> {5,2,9,8,1,7,3,6,4};
+      CollectionAssert.AreEqual(new List<int> {1,2,3,4,5,6,7,8,9}, testSortStuff.MergeSort(inputList));
     }
   }
 }
