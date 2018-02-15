@@ -57,11 +57,6 @@ namespace Sorter.Models
         List<int> subList2 = inputList.GetRange((inputList.Count/2),(inputList.Count/2+inputList.Count%2));
         subList2 = MergeSort (subList2);
 
-        subList1.ForEach(i => Console.Write("{0}\t", i));
-        Console.WriteLine("out1");
-        subList2.ForEach(i => Console.Write("{0}\t", i));
-        Console.WriteLine("out2");
-
         int i2 = 0;
         int i1 = 0;
         List<int> newList = new List<int> {};
@@ -89,11 +84,7 @@ namespace Sorter.Models
           newList.Add(subList2[i2]);
           i2++;
         }
-        inputList.ForEach(i => Console.Write("{0}\t", i));
-        Console.WriteLine("in");
         inputList = newList;
-        inputList.ForEach(i => Console.Write("{0}\t", i));
-        Console.WriteLine("out");
       }
       return inputList;
     }
